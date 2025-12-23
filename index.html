@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loungerie Amapá Garden - Sua experiência exclusiva em moda íntima refinada em Macapá, AP. Descubra coleções premium de lingerie, pijamas e loungewear que celebram sua distinção.">
+    <meta name="keywords" content="Loungerie, Amapá Garden, Moda Íntima, Lingerie, Pijamas, Loungewear, Macapá, AP, Exclusivo, Refinado, Premium, Distinção, Vestuário, Feminino">
+    <meta name="author" content="Loungerie Amapá Garden">
+    <meta name="robots" content="index, follow">
+
+    <title>Loungerie Amapá Garden | Moda Íntima Exclusiva e Refinada</title>
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujlZH0GvL2z8u3o7R4z/k4y3/i+W7+V+v+Qz8GZ+v7f+v+j+o+Q7y+v+o+j+w+o+Q7g+o+j+v+w+o+Q7x+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Loungerie Amapá Garden | Moda Íntima Exclusiva e Refinada">
+    <meta property="og:description" content="Sua experiência exclusiva em moda íntima refinada em Macapá, AP. Descubra coleções premium de lingerie, pijamas e loungewear que celebram sua distinção.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Loungerie+Amapa+Garden+Premium"> <!-- Substitua com a URL de uma imagem real da sua loja/produtos -->
+    <meta property="og:url" content="https://loungerieamapagarden.com.br"> <!-- Substitua com o domínio real do seu site -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <style>
+        :root {
+            --primary-color: #e72597; /* Rosa Primário */
+            --secondary-color: #000000; /* Preto */
+            --highlight-color: #dc8add; /* Rosa Destaque */
+            --text-light: #ffffff; /* Texto Claro */
+            --text-dark: #333333; /* Texto Escuro */
+            --background-light: #f8f8f8; /* Fundo Claro para seções alternadas */
+            --font-inter: 'Inter', sans-serif;
+            --whatsapp-green: #25d366;
+        }
+
+        /* Base Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-inter);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--highlight-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--highlight-color);
+            transform: translateY(-2px);
+            color: var(--text-light);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+        }
+
+        .nav-toggle {
+            display: none; /* Hidden on desktop */
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                width: 100%;
+                order: 1; /* Move navigation below logo on wrap */
+                display: none; /* Hide by default */
+                margin-top: 1rem;
+            }
+
+            nav.active {
+                display: block; /* Show when active */
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--secondary-color);
+                border-top: 1px solid rgba(255,255,255,0.1);
+                padding-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+                color: var(--text-light);
+            }
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--highlight-color) 100%);
+            color: var(--text-light);
+            text-align: center;
+            padding: 8rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 85vh;
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--text-light);
+            max-width: 900px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        #hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        #hero .btn {
+            background-color: var(--secondary-color);
+            padding: 1.1rem 2.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        #hero .btn:hover {
+            background-color: rgba(0,0,0,0.85);
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            #hero {
+                padding: 6rem 1rem;
+                min-height: 70vh;
+            }
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            #hero p {
+                font-size: 1.1rem;
+            }
+            #hero .btn {
+                font-size: 1rem;
+                padding: 0.9rem 2.2rem;
+            }
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 5rem 0;
+            opacity: 0; /* For fade-in effect */
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--highlight-color);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 3.5rem 0;
+            }
+            .section-title {
+                font-size: 2.2rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        /* Sobre Nós */
+        #sobre .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        #sobre p {
+            max-width: 900px;
+            margin: 0 auto 1rem auto;
+            font-size: 1.15rem;
+            color: var(--text-dark);
+        }
+        #sobre p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* Nossos Produtos */
+        #produtos .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            text-align: center;
+        }
+
+        .product-item {
+            background-color: var(--text-light);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        .product-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-item i {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .product-item p {
+            font-size: 1rem;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        /* Diferenciais */
+        #diferenciais .differentiator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            text-align: center;
+        }
+
+        .differentiator-item {
+            background-color: var(--text-light);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .differentiator-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .differentiator-item i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .differentiator-item h3 {
+            font-size: 1.7rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .differentiator-item p {
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        /* Contato */
+        #contato .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+        }
+
+        #contato .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        #contato .contact-info div {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
+
+        #contato .contact-info i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        #contato .contact-info strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        #contato .contact-info span, #contato .contact-info a {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        #contato .contact-info a {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        #contato form {
+            background-color: var(--text-light);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        #contato form label {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.05rem;
+        }
+
+        #contato form input[type="text"],
+        #contato form input[type="email"],
+        #contato form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            font-family: var(--font-inter);
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #contato form input[type="text"]:focus,
+        #contato form input[type="email"]:focus,
+        #contato form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(var(--primary-color) 0.2);
+        }
+
+        #contato form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        #contato .map-container {
+            margin-top: 4rem;
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        #contato .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 992px) {
+            #contato .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            #contato form {
+                padding: 2.5rem;
+            }
+            #contato .map-container {
+                margin-top: 3rem;
+                height: 350px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 2rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background-color: var(--whatsapp-green);
+            color: var(--text-light);
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 65px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 2rem;
+                line-height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Loungerie Amapá Garden",
+      "image": "https://via.placeholder.com/800x600.png?text=Loungerie+Amapa+Garden+Store", <!-- Substitua com a URL de uma imagem real da sua loja -->
+      "url": "https://loungerieamapagarden.com.br", <!-- Substitua com o domínio real do seu site -->
+      "telephone": "+5596981032928",
+      "email": "mailto:AMAPAGARDEN@LOUNGERIE.COM.BR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "RODOVIA JOSMAR PINTO, 2141 - 154, universidade",
+        "addressLocality": "Macapá",
+        "addressRegion": "AP",
+        "postalCode": "68901256",
+        "addressCountry": "BR"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "14:00",
+          "closes": "22:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/place/Loungerie+Amap%C3%A1+Garden/@0.0345262,-51.0594191,17z/data=!3m1!4b1!4m6!3m5!1s0x9251ab66e77144e5:0x937c05b8a0ee78c2!8m2!3d0.0345209!4d-51.0568442!16s%2Fg%2F11t17g_420?entry=ttu", <!-- URL do Google Maps para o endereço fornecido -->
+      "sameAs": [
+        "https://www.instagram.com/loungerie_amapagarden"
+        <!-- "https://www.facebook.com/your-facebook-page"  Mantenha comentado ou adicione a URL se houver uma página no Facebook -->
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">LA G</a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#produtos">Nossas Coleções</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="fade-in">
+            <div class="container">
+                <h1>Desperte a sua distinção. Exclusividade Loungerie Amapá Garden.</h1>
+                <p>Onde a sofisticação encontra o conforto, e cada peça revela uma experiência de moda íntima verdadeiramente premium.</p>
+                <a href="https://wa.me/5596981032928?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20Loungerie%20Amap%C3%A1%20Garden." target="_blank" class="btn">Fale Conosco no WhatsApp</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">Sobre a Loungerie Amapá Garden</h2>
+                <div class="content">
+                    <p>Localizada no coração do Amapá Garden Shopping, a Loungerie Amapá Garden é um santuário de moda íntima onde o luxo e a feminilidade se encontram. Dedicamo-nos a oferecer uma experiência de compra exclusiva e refinada, apresentando coleções que celebram a beleza e a confiança de cada mulher.</p>
+                    <p>Nossa missão é ir além da simples venda de produtos. Buscamos inspirar e empoderar, garantindo que cada cliente descubra peças que se ajustem perfeitamente ao seu corpo e estilo, proporcionando conforto inigualável e uma sensação de distinção em todos os momentos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">Nossas Coleções Exclusivas</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <i class="fas fa-venus-mars"></i>
+                        <h3>Lingerie de Alta Costura</h3>
+                        <p>Descubra rendas delicadas, sedas luxuosas e designs que moldam e valorizam, criando uma silhueta impecável e sofisticada para momentos especiais.</p>
+                    </div>
+                    <div class="product-item">
+                        <i class="fas fa-moon"></i>
+                        <h3>Pijamas e Loungewear Premium</h3>
+                        <p>Desfrute de conforto e elegância para seus momentos de relaxamento. Tecidos suaves e cortes impecáveis para o seu repouso com distinção e estilo.</p>
+                    </div>
+                    <div class="product-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Peças Especiais e Edições Limitadas</h3>
+                        <p>Celebre ocasiões únicas com nossas coleções sazonais e edições limitadas. Verdadeiras obras de arte em moda íntima, criadas para surpreender.</p>
+                    </div>
+                    <div class="product-item">
+                        <i class="fas fa-bra"></i>
+                        <h3>Modeladores e Acessórios Refinados</h3>
+                        <p>Soluções inteligentes e confortáveis que realçam sua beleza natural, complementando seu guarda-roupa com requinte e funcionalidade discreta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">O que nos torna únicos</h2>
+                <div class="differentiator-grid">
+                    <div class="differentiator-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Nossas consultoras oferecem uma experiência de compra única, com atenção e discrição para encontrar a peça ideal para o seu perfil e desejos.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <i class="fas fa-gem"></i>
+                        <h3>Coleções Refinadas</h3>
+                        <p>Curadoria de peças que se destacam pela qualidade premium, design inovador e atenção aos detalhes mais minuciosos, garantindo exclusividade.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <i class="fas fa-store"></i>
+                        <h3>Ambiente Exclusivo</h3>
+                        <p>Nossa loja no Amapá Garden é um convite à imersão em um universo de luxo e sofisticação, pensado para seu conforto e privacidade.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Experiência Premium</h3>
+                        <p>Mais do que moda íntima, oferecemos um estilo de vida que celebra a autoexpressão e a confiança feminina em sua plenitude, com distinção.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato Conosco</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>
+                                <strong>Localização</strong>
+                                <address>RODOVIA JOSMAR PINTO, 2141 - 154, universidade, macapá - AP, 68901256</address>
+                            </span>
+                        </div>
+                        <div>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/5596981032928" target="_blank">(96) 98103-2928</a>
+                            </span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                <strong>Email</strong>
+                                <a href="mailto:AMAPAGARDEN@LOUNGERIE.COM.BR">AMAPAGARDEN@LOUNGERIE.COM.BR</a>
+                            </span>
+                        </div>
+                        <div>
+                            <i class="fab fa-instagram"></i>
+                            <span>
+                                <strong>Instagram</strong>
+                                <a href="https://www.instagram.com/loungerie_amapagarden" target="_blank">@loungerie_amapagarden</a>
+                            </span>
+                        </div>
+                    </div>
+                    <form action="#" method="POST"> <!-- O atributo 'action' deve ser configurado para um endpoint de backend para processar o formulário. Por padrão, está como '#' -->
+                        <label for="name">Seu Nome:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Seu Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Sua Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.301385419409!2d-51.05941912415176!3d0.03452620000000456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9251ab66e77144e5%3A0x937c05b8a0ee78c2!2sLoungerie%20Amap%C3%A1%20Garden!5e0!3m2!1spt-BR!2sbr!4v1701386121434!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Loungerie Amapá Garden. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/loungerie_amapagarden" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <!-- O Facebook não foi fornecido, mas mantemos o link para fácil adição futura -->
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5596981032928?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20Loungerie%20Amap%C3%A1%20Garden." target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Toggle mobile navigation
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+        });
+
+        // Close mobile nav when a link is clicked
+        document.querySelectorAll('#mainNav ul li a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+
+        // Section fade-in on scroll (Intersection Observer API)
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0.2, /* Trigger when 20% of the section is visible */
+            rootMargin: "0px 0px -50px 0px" /* Adjusts viewport margin for earlier trigger */
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>

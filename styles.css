@@ -1,0 +1,1 @@
+:root{--color-primary:#EC4899;--color-background:#FFF5F8;--radius:16px;}*{box-sizing:border-box;}body{margin:0;font-family:sans-serif;background:var(--color-background);}.site-main{min-height:100vh;}section{padding:1.5rem 1rem;max-width:1200px;margin:0 auto;}.section-inner{background:#fff;border-radius:var(--radius);padding:1.5rem;}
